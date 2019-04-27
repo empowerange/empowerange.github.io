@@ -12,3 +12,6 @@ function openTab(evt, tabName) {
     document.getElementById(tabName).style.display = "block";
     evt.currentTarget.className += " active";
   }
+ xD=()=>{
+  openTab(event, 'id1');
+ }
