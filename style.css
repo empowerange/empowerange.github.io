@@ -56,7 +56,7 @@ nav li {
     
 }
 nav li  :hover{
-    border-bottom: 2px solid blue;
+    border-bottom: 3px solid #01CBE1;
     transition: transform .6s;
 }
 .imgProfile{
@@ -68,7 +68,7 @@ nav a{
     width: 100%;
 }
 nav li a{
-    color: black !important;
+    color: #003755 !important;
 }
 
 .slider-div{
@@ -82,13 +82,10 @@ nav li a{
 
 
 .navbar .active{
-    color:blue !important;
-    /* border-bottom: 1px solid blue; */
+    color:#01CBE1 !important;
     height: 60px;
 }
-.sliders img{
-    /* height: .7em;; */
-}
+
 .navbar-brand{
 color: red !important;
 }
