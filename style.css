@@ -82,7 +82,7 @@ nav li a{
 
 
 .navbar .active{
-    color:#01CBE1 !important;
+    /* color:#01CBE1 !important; */
     height: 60px;
 }
 

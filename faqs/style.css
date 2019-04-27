@@ -39,3 +39,7 @@
  .content:after{
    padding: 40px 10px;
  }
+
+ .content p{
+   padding: 50px 10px 50px 10px;
+ }
