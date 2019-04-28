@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+
+
+    
+    
+    <title>Easy Responsive Tabs to Accordion</title>
+    <!-- --------------------jquery lib -------------------->
+    <script src="../libs/js/jquery-3.3.1.js.js"></script>
+    
+    <!-- ------------------- bootstrap ------------------- -->
+    <link rel="stylesheet" type="text/css" href="../libs/css/bootstrap.css">
+    
+    <!-- ------------------- bootstrap script ------------------- -->
+    <script src="../libs/js/bootstrap.js"></script>
+    
+    <!-- -------------------font awesome------------------- -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <!-- -------------------- easy-responsive-tabs--------------------  -->
+    <link rel="stylesheet" type="text/css" href="../libs/css/easy-responsive-tabs.css " />
+    <script src="../libs/js/easyResponsiveTabs.js"></script>
+     
+    
+    <!-- --------------------app level script-------------------- -->
+<script src="../script.js"></script>
+
+<!-- --------------------app level stylesheet-------------------- -->
+    <link rel="stylesheet" href="../style.css">
+
+<!-- --------------------page level script-------------------- -->
+<script src="script.js"></script>
+
+<!-- --------------------page level stylesheet-------------------- -->
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    
+        <!--Horizontal Tab-->
+        <div id="parentHorizontalTab">
+            <ul class="resp-tabs-list hor_1" style="margin-left: 10px !important ;">
+                <li>Female Literacy</li>
+                <li>Environment Protection</li>
+                <li>Animal Welfare</li>
+                <li>Child Welfare</li>
+                <li>Women Empowerment</li>
+       
+            </ul>
+            <div class="resp-tabs-container hor_1">
+                <div>
+                    <!-- //Female Literacy -->
+                    <p>NGOs working on increasing the female literacy rate in the country. </p>
+
+                </div>
+                <div>
+                    <!-- //Environment Protection -->
+                    <p>These includes the NGOs working on safeguarding our environment with activities like but not limited to: River and Street Cleanups, Safe disposal of garbage/toxic substances, Pollution Control, Vegetation Conservation, Global Warming, etc. </p> 
+
+
+                </div>
+                <div>
+                    <!-- //Animal Welfare -->
+                    <p>NGOs working on Animals Rescue and Welfare. The term 'animals' includes terrestrial as well as acquatic life, birds, domestic animals, etc. </p>
+
+                </div>
+                <div>
+                    <!-- //Child Welfare -->
+                    <p>NGOs working on child safety, literacy, welfare, and curbing child labour. </p>
+
+                </div>
+                <div>
+                    <!-- Women Empowerment -->
+                     <p>NGos working on empowering women in the society by teaching them various skills and providing them opportunities to succeed. </p>
+
+                </div>
+            </div>
+        </div>	
+	<!--Plug-in Initialisation-->
+	<script type="text/javascript">
+    $(document).ready(function() {
+        //Horizontal Tab
+        $('#parentHorizontalTab').easyResponsiveTabs({
+            type: 'default', //Types: default, vertical, accordion
+            width: 'auto', //auto or any width like 600px
+            fit: true, // 100% fit in a container
+            tabidentify: 'hor_1', // The tab groups identifier
+            activate: function(event) { // Callback function if tab is switched
+                var $tab = $(this);
+                var $info = $('#nested-tabInfo');
+                var $name = $('span', $info);
+                $name.text($tab.text());
+                $info.show();
+            }
+        });
+    });
+</script>
+</body>
+</html>

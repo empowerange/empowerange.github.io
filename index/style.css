@@ -18,58 +18,14 @@
   width: 600px;
 }
  
+#parentHorizontalTab p{
+  margin: 50px 20px;
+  font-size: 1.2em;
+}
 
-/* tabs styles */
-.tab {
-  margin: auto;
-    overflow: hidden;
-    position: sticky;
-    /* border: 1px solid #ccc; */
-    /* background-color: #01CBE1; */
-    /* background-color: #f1f1f1; */
-  }
-  
-  /* Style the buttons inside the tab */
-  .tab button {
-    background-color: inherit;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    transition: 0.3s;
-    font-size: 17px;
-    color: #f1f1f1;
-    background-color: #01CBE1;  
-    margin: 1px;
-    border: 1px solid white;
-  }
-  
-  /* Change background color of buttons on hover */
-  /* .tab button:hover {
-    background-color: #ddd;
-  }
-   */
-  /* Create an active/current tablink class */
-  .tab button.active {
-    background-color: white;
-    color: #01CBE1;
-    border-bottom: 1px solid #01CBE1;
-  }
-  
-  .default-tab{
-    display:"block";
-  }
-  /* Style the tab content */
-  .tabcontent {
-    display: none;
-    padding: 6px 12px;
-    border-top: none;
-    padding :50px;
-    text-align: center; 
-    color: #003755;
-    background-color: #fff;
-  }
+#parentHorizontalTab ul li{
+  background-color: #01CBE1;
+}
 
   .col-sm-6 i{
     color: #003755 !important;

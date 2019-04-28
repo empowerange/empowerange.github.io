@@ -15,6 +15,10 @@
 
     <!-- -------------------font awesome------------------- -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    
+    <!-- -------------------- easy-responsive-tabs--------------------  -->
+    <link rel="stylesheet" type="text/css" href="../libs/css/easy-responsive-tabs.css " />
+    <script src="../libs/js/easyResponsiveTabs.js"></script>
  
     <!-- --------------------app level script-------------------- -->
     <script src="../script.js"></script>
@@ -27,7 +31,7 @@
 
 
 </head>
-<body onload="xD()"> 
+<body> 
 	<nav class="navbar navbar-fixed-top navbar-default   ">
 		<div class="">
 			<div class="navbar-header">
@@ -133,55 +137,67 @@
 
 <!-- tabs will go here  -->
 
-	<h3 class="text-center">GENRES OF NGOS THAT WE COVER</h3>
+  <h3 class="text-center">GENRES OF NGOS THAT WE COVER</h3>
+  <br>
+  <div id="parentHorizontalTab" class="text-center">
+      <ul class="resp-tabs-list hor_1" style="margin-left: 10px !important ;">
+          <li>Female Literacy</li>
+          <li>Environment Protection</li>
+          <li>Animal Welfare</li>
+          <li>Child Welfare</li>
+          <li>Women Empowerment</li>
+ 
+      </ul>
+      <div class="resp-tabs-container hor_1">
+          <div>
+              <!-- //Female Literacy -->
+              <p>NGOs working on increasing the female literacy rate in the country. </p>
 
-<center>
-<div class="tab">
-  <button class="tablinks" onclick="openTab(event, 'id1')">Female Literacy</button>
-  <button class="tablinks" onclick="openTab(event, 'id2')">Environment Protection</button>
-  <button class="tablinks" onclick="openTab(event, 'id3')">Animal Welfare</button>
-  <button class="tablinks" onclick="openTab(event, 'id4')">Child Welfare</button>
-  <button class="tablinks" onclick="openTab(event, 'id5')">Women Empowerment</button>
-  <button class="tablinks" onclick="openTab(event, 'id6')">lorem ipsum </button>
-  <button class="tablinks" onclick="openTab(event, 'id7')">lorem ipsum</button>
-  <button class="tablinks" onclick="openTab(event, 'id8')">lorem ipsum</button>
-</div>
-</center>
-<!-- tabs description  -->
-<div id="id1" class=" tabcontent">
-  <p>NGOs working on increasing the female literacy rate in the country. </p>
-</div>
-
-<div id="id2" class="tabcontent"> 
-  <p>These includes the NGOs working on safeguarding our environment with activities like but not limited to: River and Street Cleanups, Safe disposal of garbage/toxic substances, Pollution Control, Vegetation Conservation, Global Warming, etc. </p> 
-</div>
-
-<div id="id3" class="tabcontent">
-  <p>NGOs working on Animals Rescue and Welfare. The term 'animals' includes terrestrial as well as acquatic life, birds, domestic animals, etc. </p>
-</div>
-	
-<div id="id4" class="tabcontent">
-  <p>NGOs working on child safety, literacy, welfare, and curbing child labour. </p>
-</div>
-
-<div id="id5" class="tabcontent">
-  <p>NGos working on empowering women in the society by teaching them various skills and providing them opportunities to succeed. </p>
-</div>
-
-<div id="id6" class="tabcontent">
-  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro labore officiis earum sunt in! Perferendis, eveniet veritatis? Animi vel dolorem illo voluptatem reprehenderit maiores nobis ex illum repellat. Neque, itaque?</p>
-</div>
-
-<div id="id7" class="tabcontent">
-  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro labore officiis earum sunt in! Perferendis, eveniet veritatis? Animi vel dolorem illo voluptatem reprehenderit maiores nobis ex illum repellat. Neque, itaque?</p>
-</div>
-
-<div id="id8" class="tabcontent">
-  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro labore officiis earum sunt in! Perferendis, eveniet veritatis? Animi vel dolorem illo voluptatem reprehenderit maiores nobis ex illum repellat. Neque, itaque?</p>
-</div>
+          </div>
+          <div>
+              <!-- //Environment Protection -->
+              <p>These includes the NGOs working on safeguarding our environment with activities like but not limited to: River and Street Cleanups, Safe disposal of garbage/toxic substances, Pollution Control, Vegetation Conservation, Global Warming, etc. </p> 
 
 
+          </div>
+          <div>
+              <!-- //Animal Welfare -->
+              <p>NGOs working on Animals Rescue and Welfare. The term 'animals' includes terrestrial as well as acquatic life, birds, domestic animals, etc. </p>
 
+          </div>
+          <div>
+              <!-- //Child Welfare -->
+              <p>NGOs working on child safety, literacy, welfare, and curbing child labour. </p>
+
+          </div>
+          <div>
+              <!-- Women Empowerment -->
+               <p>NGos working on empowering women in the society by teaching them various skills and providing them opportunities to succeed. </p>
+
+          </div>
+      </div>
+  </div>	
+<!--Plug-in Initialisation-->
+<script type="text/javascript">
+$(document).ready(function() {
+  //Horizontal Tab
+  $('#parentHorizontalTab').easyResponsiveTabs({
+      type: 'default', //Types: default, vertical, accordion
+      width: 'auto', //auto or any width like 600px
+      fit: true, // 100% fit in a container
+      tabidentify: 'hor_1', // The tab groups identifier
+      activate: function(event) { // Callback function if tab is switched
+          var $tab = $(this);
+          var $info = $('#nested-tabInfo');
+          var $name = $('span', $info);
+          $name.text($tab.text());
+          $info.show();
+      }
+  });
+});
+</script>
+
+<br>
 
 <!-- ================ stats ============== -->
 <div class="stats-div">
