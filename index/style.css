@@ -23,8 +23,8 @@
   font-size: 1.2em;
 }
 
-#parentHorizontalTab ul li{
-  background-color: #01CBE1;
+#parentHorizontalTab ul{
+  align-content: center;
 }
 
   .col-sm-6 i{
