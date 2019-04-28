@@ -12,6 +12,11 @@
  .btn{
    padding: 10px 40px;
  }
+
+ .imgProfile{
+  max-height : 350px;
+  width: 600px;
+}
  
 
 /* tabs styles */

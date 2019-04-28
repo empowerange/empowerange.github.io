@@ -59,10 +59,7 @@ nav li  :hover{
     border-bottom: 3px solid #01CBE1;
     transition: transform .6s;
 }
-.imgProfile{
-    height : 350px;
-    width: 600px;
-}
+
 nav a{
     height: 60px !important;
     width: 100%;
